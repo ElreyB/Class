@@ -62,14 +62,12 @@ public class Program
     string petMaxAge = Console.ReadLine();
     int maxAge = int.Parse(petMaxAge);
 
+    Console.WriteLine("====Animals you may like====\n");
     foreach(Animal adoptable in AnimalsToAdopt)
     {
       if(adoptable.Age <= maxAge)
       {
-        Console.WriteLine("====Animals you may like====\n");
-        Console.WriteLine("Name: " + adoptable.Name);
-        Console.WriteLine("Species: " + adoptable.Species);
-        Console.WriteLine("Age: " + adoptable.Age + "\n");
+        Console.WriteLine("Species: " + adoptable.Species + "\n");
       }
     }
   }
