@@ -6,6 +6,11 @@ class Car
   public string MakeModel;
   public int Price;
   public int Miles;
+
+  public bool WorthBuying(int maxPrice, int maxMiles)
+  {
+    return (Price < maxPrice && Miles < maxMiles);
+  }
 }
 
 public class Program
