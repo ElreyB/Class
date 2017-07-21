@@ -32,21 +32,22 @@ public class Program
     mercedes.Price = 39900;
     mercedes.Miles = 37979;
 
+
     List<Car> Cars = new List<Car>() { porsche, ford, lexus, mercedes };
-    foreach(Car automobile in Cars)
-    {
-      Console.WriteLine(automobile.MakeModel);
-    }
 
     Console.WriteLine("Enter maximum price: ");
     string stringMaxPrice = Console.ReadLine();
     int maxPrice = int.Parse(stringMaxPrice);
 
-    List<Car> CarsMatchingSearch = new List<Car>();
+    Console.WriteLine("Enter maximum miles: ");
+    string stringMaxMiles = Console.ReadLine();
+    int maxMiles = int.Parse(stringMaxMiles);
+
+    List<Car> CarsMatchingSearch = new List<Car>(0);
 
     foreach (Car automobile in Cars)
     {
-      if (automobile.Price < maxPrice)
+      if (automobile.Price < maxPrice && automobile.Miles < maxMiles)
       {
         CarsMatchingSearch.Add(automobile);
       }
