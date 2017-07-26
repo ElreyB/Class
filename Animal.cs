@@ -12,19 +12,11 @@ class Animal
   public bool IsACat(string species)
   {
     return species == "Feline";
-    // if (species == "Feline")
-    // {
-    //   return true;
-    // }
-    // else
-    // {
-    //   return false;
-    // }
   }
 
-  public bool IsAdopted(bool adoptedPet)
+  public bool IsNotAdopted(bool adopted)
   {
-    return adoptedPet == true;
+    return adopted == false;
   }
 
 
